@@ -1,0 +1,8 @@
+services:
+    frontend:
+      build: ./frontend
+      stdin_open: true
+      tty: true
+volumes:
+  data:
+  logs:

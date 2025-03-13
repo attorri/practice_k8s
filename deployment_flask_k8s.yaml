@@ -18,5 +18,8 @@ spec:
           ports:
             - containerPort: 5000
           env: 
-            - name: FLASK_ENV
-              value: "development"
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: openai-api-secret
+                  key: OPENAI_API_KEY
